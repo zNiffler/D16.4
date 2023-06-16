@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>account page</title>
+    </head>
+    <body>
+        this is where account options will be (maybe)
+    {% if is_not_author %}
+        <button> <a href="{% url 'authorise'%}">Стать автором</a> </button>
+    {% endif %}
+    </body>
+</html>

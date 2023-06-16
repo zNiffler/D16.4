@@ -1,0 +1,21 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+
+{% block title %}
+{{news_detail.header|censor}}
+{% endblock title %}
+
+{% block content %}
+<h1>{{news_detail.header|censor}}</h1>
+<div>by: {{news_detail.author }}</div>
+<div>{{news_detail.text|censor}}<br>published on: {{news_detail.creation_time|date:'d.M.Y'}}</div>
+<br>
+<h5>categories</h5>
+{% if news_detail.categories %}
+    {% for category in news_detail.categories.all %}
+        <div>{{ category }} <a href="{%url 'subscribe'%}?cat={{ category }}">sub</a></div>
+    {% endfor %}
+{% endif %}
+
+{% endblock content %}

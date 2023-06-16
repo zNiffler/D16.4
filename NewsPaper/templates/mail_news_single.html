@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ header }}</title>
+</head>
+<body>
+    <h2>{{ header }}</h2>
+    <p>{{ text|truncatechars:50 }}</p>
+    <div>Появилась новая статья в отслеживаемой Вами категории,
+        прочитать ее можно <a href="http://127.0.0.1:8000/news/{{ id }}">здесь</a> </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список свежих новостей</title>
+</head>
+<body>
+    {% for news_item in news_list %}
+        <h2>{{ news_item.header }}</h2>
+        <p>{{ news_iterm.text|truncatechars:50 }}</p>
+        <div><a href="http://127.0.0.1:8000/news/{{ id }}">Прочитать эту статью </a> </div>
+        <br>
+    {% endfor %}
+</body>
+</html>
